@@ -8,3 +8,4 @@ pipelineConfig:
       postBuild:
         steps:
         - command: go test -v 2>&1 | go-junit-report > junit.xml
+        - command: curl -H "Content-Type: multipart/form-data" -u sergio:123456 -F "file=@junit.xml" https://sandbox.xpand-it.com/rest/raven/1.0/import/execution/junit?projectKey=CALC
