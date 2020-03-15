@@ -1,0 +1,88 @@
+
+Showing logs for build [32mjxbitcoder-jx-tutorial-master-r-dhl58-4[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-lkqjw[0m
+{"level":"warn","ts":1584286694.9568408,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1584286694.9575734,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mjxbitcoder-jx-tutorial-master-r-dhl58-4[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-g5swp[0m
+{"level":"warn","ts":1584286695.9436345,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1584286695.9540324,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+
+Showing logs for build [32mjxbitcoder-jx-tutorial-master-r-dhl58-4[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mjxbitcoder-jx-tutorial-master-r-dhl58-4[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-jxbitcoder-jx-tutorial-master-r-dhl58-s5j79[0m
+{"level":"warn","ts":1584286704.0888786,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1584286705.253979,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/**bitcoder/**-tutorial.git @ v0.0.4 in path /workspace/source"}
+
+Showing logs for build [32mjxbitcoder-jx-tutorial-master-r-dhl58-4[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:515c776fb8584370abaaade6c2de475d915a065e
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mjxbitcoder-jx-tutorial-master-r-dhl58-4[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /workspace/xdg_config/git/credentials
+
+Showing logs for build [32mjxbitcoder-jx-tutorial-master-r-dhl58-4[0m stage [32mfrom-build-pack[0m and container [32mstep-build-make-build[0m
+CGO_ENABLED=0 GO15VENDOREXPERIMENT=1 go build -ldflags '' -o bin/**-tutorial main.go
+
+Showing logs for build [32mjxbitcoder-jx-tutorial-master-r-dhl58-4[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+[36mINFO[0m[0000] No base image, nothing to extract            
+[36mINFO[0m[0000] cmd: EXPOSE                                  
+[36mINFO[0m[0000] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0000] Using files from context: [/workspace/source/bin] 
+[36mINFO[0m[0000] Skipping unpacking as no commands require it. 
+[36mINFO[0m[0000] Taking snapshot of full filesystem...        
+[36mINFO[0m[0000] EXPOSE 8080                                  
+[36mINFO[0m[0000] cmd: EXPOSE                                  
+[36mINFO[0m[0000] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0000] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0000] ENTRYPOINT ["/**-tutorial"]                  
+[36mINFO[0m[0000] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0000] Using files from context: [/workspace/source/bin] 
+[36mINFO[0m[0000] COPY ./bin/ /                                
+[36mINFO[0m[0000] Taking snapshot of files...                  
+2020/03/15 15:38:40 pushed blob: sha256:7350e33a0be755e17f75e76102d0c0b4d8987f4d2f7a74d81f3504395a5ef4e0
+2020/03/15 15:38:41 pushed blob: sha256:c2bea33c0174d7b20e6582a5a2daa1d080f42586e5829f4a5d1b26c2f83c93f9
+2020/03/15 15:38:43 gcr.io/api-project-173776728244/**-tutorial:0.0.4: digest: sha256:fac2b755c4983f380b4d697e61abf6594d346f99907c49b26a532e7f74e2304b size: 428
+
+Showing logs for build [32mjxbitcoder-jx-tutorial-master-r-dhl58-4[0m stage [32mfrom-build-pack[0m and container [32mstep-build-post-build[0m
+no CVE provider running in the current ** namespace so skip adding image to be analysed
+
+Showing logs for build [32mjxbitcoder-jx-tutorial-master-r-dhl58-4[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-changelog[0m
+Converted /workspace/source/charts/**-tutorial to an unshallow repository
+Generating change log from git ref f810c318041de54c29a712e1ea6c5462187dcef3 => b9406f3de01bd649eac51aeea0aab8bebb65cc74
+Associating user x-0 in users.jenkins.io with email sergio.freire@xpand-it.com to git GitProvider user with login -0 as emails match
+Adding label jenkins.io/git-github-userid=-0 to user x-0 in users.jenkins.io
+WARNING: Failed to enrich commit b11517c7eba12bd9b2ec76be84fc98fe3acd10ec with issues: User.jenkins.io "x-0" is invalid: metadata.labels: Invalid value: "-0": a valid label must be an empty string or consist of alphanumeric characters, '-', '_' or '.', and must start and end with an alphanumeric character (e.g. 'MyValue',  or 'my_value',  or '12345', regex used for validation is '(([A-Za-z0-9][-A-Za-z0-9_.]*)?[A-Za-z0-9])?')
+Associating user x-0 in users.jenkins.io with email sergio.freire@xpand-it.com to git GitProvider user with login -0 as emails match
+Adding label jenkins.io/git-github-userid=-0 to user x-0 in users.jenkins.io
+WARNING: Failed to enrich commit b11517c7eba12bd9b2ec76be84fc98fe3acd10ec with issues: User.jenkins.io "x-0" is invalid: metadata.labels: Invalid value: "-0": a valid label must be an empty string or consist of alphanumeric characters, '-', '_' or '.', and must start and end with an alphanumeric character (e.g. 'MyValue',  or 'my_value',  or '12345', regex used for validation is '(([A-Za-z0-9][-A-Za-z0-9_.]*)?[A-Za-z0-9])?')
+Finding issues in commit messages using git format
+WARNING: No release found for **bitcoder/**-tutorial and tag v0.0.4 so creating a new release
+Updated the release information at https://github.com/**bitcoder/**-tutorial/releases/tag/v0.0.4
+generated: /workspace/source/charts/**-tutorial/templates/release.yaml
+Created Release **-tutorial-0-0-4 resource in namespace **
+Updating PipelineActivity **bitcoder-**-tutorial-master-4 with version 0.0.4
+Updated PipelineActivities **bitcoder-**-tutorial-master-4 with release notes URL: https://github.com/**bitcoder/**-tutorial/releases/tag/v0.0.4
+
+Showing logs for build [32mjxbitcoder-jx-tutorial-master-r-dhl58-4[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-helm-release[0m
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Uploading chart file **-tutorial-0.0.4.tgz to http://jenkins-x-chartmuseum:8080/api/charts
+Received 201 response: {"saved":true}
+
+Showing logs for build [32mjxbitcoder-jx-tutorial-master-r-dhl58-4[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-jx-promote[0m
+WARNING: prow based install so skip waiting for the merge of Pull Requests to go green as currently there is an issue with gettingstatuses from the PR, see https://github.com/jenkins-x/**/issues/2410
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Promoting app **-tutorial version 0.0.4 to namespace **-staging
+WARNING: 
+Created Pull Request: https://github.com/**bitcoder/environment-cluster1-staging/pull/4
+Added label updatebot to Pull Request https://github.com/**bitcoder/environment-cluster1-staging/pull/4
+got git provider status pending from PR https://github.com/**bitcoder/environment-cluster1-staging/pull/4
+got git provider status pending from PR https://github.com/**bitcoder/environment-cluster1-staging/pull/4
+got git provider status pending from PR https://github.com/**bitcoder/environment-cluster1-staging/pull/4
+got git provider status pending from PR https://github.com/**bitcoder/environment-cluster1-staging/pull/4
+Pull Request https://github.com/**bitcoder/environment-cluster1-staging/pull/4 is merged at sha 5cee27e05c6274227bdded7afece5fbd39b9d015
+Pull Request merged but we are not waiting for the update pipeline to complete!
