@@ -2,9 +2,8 @@ buildPack: go
 pipelineConfig:
   pipelines:
     pullRequest:
-        setup:
-            steps:
-            - command: go get github.com/jstemmer/go-junit-report
-        postBuild:
+      setup:
+        - command: go get github.com/jstemmer/go-junit-report
+      postBuild:
         steps:
         - command: go test -v 2>&1 | go-junit-report > junit.xml
