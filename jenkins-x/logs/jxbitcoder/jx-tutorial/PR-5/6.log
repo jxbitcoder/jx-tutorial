@@ -1,0 +1,106 @@
+
+Showing logs for build [32mjxbitcoder-jx-tutorial-pr-5-pr-d9m4t-6[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-ckfxb[0m
+{"level":"warn","ts":1584299439.8424292,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1584299439.8429093,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mjxbitcoder-jx-tutorial-pr-5-pr-d9m4t-6[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-lhzbp[0m
+{"level":"warn","ts":1584299440.3148398,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1584299440.3163671,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+
+Showing logs for build [32mjxbitcoder-jx-tutorial-pr-5-pr-d9m4t-6[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mjxbitcoder-jx-tutorial-pr-5-pr-d9m4t-6[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-jxbitcoder-jx-tutorial-pr-5-pr-d9m4t-9ccsb[0m
+{"level":"warn","ts":1584299447.3847475,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1584299448.4587002,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/**bitcoder/**-tutorial.git @ master in path /workspace/source"}
+
+Showing logs for build [32mjxbitcoder-jx-tutorial-pr-5-pr-d9m4t-6[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:aac1d9f2dc6b2ab0efc53f3c5a975658604f97e3,5:f94c1d2712018c434812d19aa284376d64d0fbd1
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git fetch origin --unshallow f94c1d2712018c434812d19aa284376d64d0fbd1: aac1d9f2dc6b2ab0efc53f3c5a975658604f97e3:
+DEBUG: ran git fetch --unshallow origin f94c1d2712018c434812d19aa284376d64d0fbd1: aac1d9f2dc6b2ab0efc53f3c5a975658604f97e3: in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git branch
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git checkout master
+DEBUG: ran git checkout master in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git reset --hard aac1d9f2dc6b2ab0efc53f3c5a975658604f97e3
+DEBUG: ran git reset --hard aac1d9f2dc6b2ab0efc53f3c5a975658604f97e3 in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git clean -fd .
+DEBUG: ran clean --force -d . in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git merge f94c1d2712018c434812d19aa284376d64d0fbd1
+DEBUG: ran git merge f94c1d2712018c434812d19aa284376d64d0fbd1 in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git log --format=%H%x1f%an%x1f%ae%x1f%cn%x1f%ce%x1f%s%n%b%x1e aac1d9f2dc6b2ab0efc53f3c5a975658604f97e3..HEAD
+Merged SHA 16000eadbcc7ec291a2be49839c9e753a5583907 with commit message 'Merge commit 'f94c1d2712018c434812d19aa284376d64d0fbd1'' into base branch master
+Merged SHA f94c1d2712018c434812d19aa284376d64d0fbd1 with commit message 'submit to Xray sandbox2' into base branch master
+Merged SHA 61983a0322b541be82fe80f5001db64fa0d28961 with commit message 'submit to Xray sandbox' into base branch master
+Merged SHA 8d41d64ad8e4ecce8052df8c2cae1d228d82871a with commit message 'add go dependency fix3' into base branch master
+Merged SHA 5328b0720ba37955beda65aa3937e3e5958576fa with commit message 'add go dependency fix' into base branch master
+Merged SHA d7ffd2c6ffe5a7a515cbd585a34b195befd6905b with commit message 'add go dependency' into base branch master
+Merged SHA 2fd7ad01f24e5a8499cbab3f891b8493450374cf with commit message 'run unit tests after building' into base branch master
+
+Showing logs for build [32mjxbitcoder-jx-tutorial-pr-5-pr-d9m4t-6[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-step2[0m
+
+Showing logs for build [32mjxbitcoder-jx-tutorial-pr-5-pr-d9m4t-6[0m stage [32mfrom-build-pack[0m and container [32mstep-build-make-linux[0m
+CGO_ENABLED=0 GOOS=linux GOARCH=amd64 GO15VENDOREXPERIMENT=1 go build -ldflags '' -o bin/**-tutorial main.go
+
+Showing logs for build [32mjxbitcoder-jx-tutorial-pr-5-pr-d9m4t-6[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+[36mINFO[0m[0000] No base image, nothing to extract            
+[36mINFO[0m[0000] cmd: EXPOSE                                  
+[36mINFO[0m[0000] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0000] Using files from context: [/workspace/source/bin] 
+[36mINFO[0m[0000] Skipping unpacking as no commands require it. 
+[36mINFO[0m[0000] Taking snapshot of full filesystem...        
+[36mINFO[0m[0000] EXPOSE 8080                                  
+[36mINFO[0m[0000] cmd: EXPOSE                                  
+[36mINFO[0m[0000] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0000] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0000] ENTRYPOINT ["/**-tutorial"]                  
+[36mINFO[0m[0000] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0000] Using files from context: [/workspace/source/bin] 
+[36mINFO[0m[0000] COPY ./bin/ /                                
+[36mINFO[0m[0000] Taking snapshot of files...                  
+2020/03/15 19:11:07 pushed blob: sha256:05a0738d1ac03297bc039fb583d0b84bc14543cd71b5420b6115733a32b05737
+2020/03/15 19:11:08 pushed blob: sha256:1ab2604feb58e4ff51c4cd90d66eb33cb4daa1e9965c26b852019f35671bc8ac
+2020/03/15 19:11:09 gcr.io/api-project-173776728244/**-tutorial:0.0.0-SNAPSHOT-PR-5-6: digest: sha256:744d6bb2302f411f327ddb61ccf6f3815dbf29d24e09f9feba257a2774b201a2 size: 428
+
+Showing logs for build [32mjxbitcoder-jx-tutorial-pr-5-pr-d9m4t-6[0m stage [32mfrom-build-pack[0m and container [32mstep-postbuild-post-build[0m
+no CVE provider running in the current ** namespace so skip adding image to be analysed
+
+Showing logs for build [32mjxbitcoder-jx-tutorial-pr-5-pr-d9m4t-6[0m stage [32mfrom-build-pack[0m and container [32mstep-postbuild-step6[0m
+
+Showing logs for build [32mjxbitcoder-jx-tutorial-pr-5-pr-d9m4t-6[0m stage [32mfrom-build-pack[0m and container [32mstep-postbuild-step7[0m
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100   710    0     0  100   710      0    571  0:00:01  0:00:01 --:--:--   571100  1027    0   317  100   710    236    530  0:00:01  0:00:01 --:--:--   530
+{"testExecIssue":{"id":"20600","key":"CALC-1","self":"https://sandbox.xpand-it.com/rest/api/2/issue/20600"},"testIssues":{"success":[{"id":"20601","key":"CALC-2","self":"https://sandbox.xpand-it.com/rest/api/2/issue/20601"},{"id":"20602","key":"CALC-3","self":"https://sandbox.xpand-it.com/rest/api/2/issue/20602"}]}}
+
+Showing logs for build [32mjxbitcoder-jx-tutorial-pr-5-pr-d9m4t-6[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-make-preview[0m
+sed -i -e "s/version:.*/version: 0.0.0-SNAPSHOT-PR-5-6/" Chart.yaml
+sed -i -e "s/version:.*/version: 0.0.0-SNAPSHOT-PR-5-6/" ../*/Chart.yaml
+sed -i -e "s|repository:.*|repository: gcr.io\/api-project-173776728244\/**-tutorial|" values.yaml
+sed -i -e "s/tag:.*/tag: 0.0.0-SNAPSHOT-PR-5-6/" values.yaml
+echo "  version: 0.0.0-SNAPSHOT-PR-5-6" >> requirements.yaml
+** step helm build
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: chartmuseum.jenkins-x.io http://chartmuseum.jenkins-x.io
+Successfully added Helm repository chartmuseum.jenkins-x.io.
+
+Showing logs for build [32mjxbitcoder-jx-tutorial-pr-5-pr-d9m4t-6[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-jx-preview[0m
+Creating a preview
+expose:
+  Annotations:
+    helm.sh/hook: post-install,post-upgrade
+    helm.sh/hook-delete-policy: hook-succeeded
+  config:
+    domain: 34.77.45.157.nip.io
+    exposer: Ingress
+    http: "true"
+preview:
+  image:
+    repository: gcr.io/api-project-173776728244/**-tutorial
+    tag: 0.0.0-SNAPSHOT-PR-5-6
+
+Updating PipelineActivities **bitcoder-**-tutorial-pr-5-6 which has status Running
+Preview application is now available at: http://**-tutorial.**-**bitcoder-**-tutorial-pr-5.34.77.45.157.nip.io
