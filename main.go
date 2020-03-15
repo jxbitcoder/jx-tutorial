@@ -20,6 +20,10 @@ func handler(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, "SF3-Hello from:  "+title+"\n")
 }
 
+func Sum(x int, y int) int {
+    return x + y
+}
+
 func main() {
 	http.HandleFunc("/", handler)
 	http.ListenAndServe(":8080", nil)
