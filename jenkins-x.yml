@@ -3,6 +3,7 @@ pipelineConfig:
   pipelines:
     pullRequest:
       setup:
+        steps:
         - command: go get github.com/jstemmer/go-junit-report
       postBuild:
         steps:
