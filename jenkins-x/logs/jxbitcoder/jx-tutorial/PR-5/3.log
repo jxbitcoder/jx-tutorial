@@ -1,0 +1,60 @@
+
+Showing logs for build [32mmeta-jxbitcoder-jx-tutorial-pr-t4p5n-3[0m stage [32mmeta-pipeline[0m and container [32mstep-credential-initializer-8n8sr[0m
+{"level":"warn","ts":1584298665.599908,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1584298665.6006896,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mmeta-jxbitcoder-jx-tutorial-pr-t4p5n-3[0m stage [32mmeta-pipeline[0m and container [32mstep-working-dir-initializer-b8tlh[0m
+{"level":"warn","ts":1584298666.6455765,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1584298666.6535072,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+
+Showing logs for build [32mmeta-jxbitcoder-jx-tutorial-pr-t4p5n-3[0m stage [32mmeta-pipeline[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mmeta-jxbitcoder-jx-tutorial-pr-t4p5n-3[0m stage [32mmeta-pipeline[0m and container [32mstep-git-source-meta-jxbitcoder-jx-tutorial-pr-t4p5n-2pl6k[0m
+{"level":"warn","ts":1584298670.7577157,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1584298671.824386,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/**bitcoder/**-tutorial.git @ aac1d9f2dc6b2ab0efc53f3c5a975658604f97e3 in path /workspace/source"}
+
+Showing logs for build [32mmeta-jxbitcoder-jx-tutorial-pr-t4p5n-3[0m stage [32mmeta-pipeline[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:aac1d9f2dc6b2ab0efc53f3c5a975658604f97e3,5:5328b0720ba37955beda65aa3937e3e5958576fa
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git fetch origin --unshallow 5328b0720ba37955beda65aa3937e3e5958576fa: aac1d9f2dc6b2ab0efc53f3c5a975658604f97e3:
+DEBUG: ran git fetch --unshallow origin 5328b0720ba37955beda65aa3937e3e5958576fa: aac1d9f2dc6b2ab0efc53f3c5a975658604f97e3: in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git branch
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git checkout master
+DEBUG: ran git checkout master in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git reset --hard aac1d9f2dc6b2ab0efc53f3c5a975658604f97e3
+DEBUG: ran git reset --hard aac1d9f2dc6b2ab0efc53f3c5a975658604f97e3 in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git clean -fd .
+DEBUG: ran clean --force -d . in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git merge 5328b0720ba37955beda65aa3937e3e5958576fa
+DEBUG: ran git merge 5328b0720ba37955beda65aa3937e3e5958576fa in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git log --format=%H%x1f%an%x1f%ae%x1f%cn%x1f%ce%x1f%s%n%b%x1e aac1d9f2dc6b2ab0efc53f3c5a975658604f97e3..HEAD
+Merged SHA f8530355d4b3380b674acf9063cc41c818d527f1 with commit message 'Merge commit '5328b0720ba37955beda65aa3937e3e5958576fa'' into base branch master
+Merged SHA 5328b0720ba37955beda65aa3937e3e5958576fa with commit message 'add go dependency fix' into base branch master
+Merged SHA d7ffd2c6ffe5a7a515cbd585a34b195befd6905b with commit message 'add go dependency' into base branch master
+Merged SHA 2fd7ad01f24e5a8499cbab3f891b8493450374cf with commit message 'run unit tests after building' into base branch master
+
+Showing logs for build [32mmeta-jxbitcoder-jx-tutorial-pr-t4p5n-3[0m stage [32mmeta-pipeline[0m and container [32mstep-merge-pull-refs[0m
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git fetch origin --unshallow 5328b0720ba37955beda65aa3937e3e5958576fa: aac1d9f2dc6b2ab0efc53f3c5a975658604f97e3:
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git fetch origin 5328b0720ba37955beda65aa3937e3e5958576fa: aac1d9f2dc6b2ab0efc53f3c5a975658604f97e3:
+DEBUG: ran git fetch origin 5328b0720ba37955beda65aa3937e3e5958576fa: aac1d9f2dc6b2ab0efc53f3c5a975658604f97e3: in 
+DEBUG: JX_LOG_LEVEL=error LC_ALL=C git rev-parse --is-shallow-repository
+DEBUG: Unshallowed git repo in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git branch
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git checkout master
+DEBUG: ran git checkout master in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git reset --hard aac1d9f2dc6b2ab0efc53f3c5a975658604f97e3
+DEBUG: ran git reset --hard aac1d9f2dc6b2ab0efc53f3c5a975658604f97e3 in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git clean -fd .
+DEBUG: ran clean --force -d . in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git merge 5328b0720ba37955beda65aa3937e3e5958576fa
+DEBUG: ran git merge 5328b0720ba37955beda65aa3937e3e5958576fa in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git log --format=%H%x1f%an%x1f%ae%x1f%cn%x1f%ce%x1f%s%n%b%x1e aac1d9f2dc6b2ab0efc53f3c5a975658604f97e3..HEAD
+Merged SHA 8804d13886257ea374c679f247ceffe40aa177d7 with commit message 'Merge commit '5328b0720ba37955beda65aa3937e3e5958576fa'' into base branch master
+Merged SHA 5328b0720ba37955beda65aa3937e3e5958576fa with commit message 'add go dependency fix' into base branch master
+Merged SHA d7ffd2c6ffe5a7a515cbd585a34b195befd6905b with commit message 'add go dependency' into base branch master
+Merged SHA 2fd7ad01f24e5a8499cbab3f891b8493450374cf with commit message 'run unit tests after building' into base branch master
+
+Showing logs for build [32mmeta-jxbitcoder-jx-tutorial-pr-t4p5n-3[0m stage [32mmeta-pipeline[0m and container [32mstep-create-effective-pipeline[0m
+error: failed to load project config in dir /workspace/source: Validation failures in YAML file /workspace/source/jenkins-x.yml:
+pipelineConfig.pipelines.pullRequest.setup: Invalid type. Expected: object, given: array
+[31m
+Pipeline failed on stage 'meta-pipeline' : container 'step-create-effective-pipeline'. The execution of the pipeline has stopped.[0m
