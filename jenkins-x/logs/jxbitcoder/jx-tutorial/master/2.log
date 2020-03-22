@@ -1,29 +1,31 @@
 
-Showing logs for build [32mjxbitcoder-jx-tutorial-master-r-99tll-2[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-nvc6z[0m
-{"level":"warn","ts":1584275120.0357075,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
-{"level":"info","ts":1584275120.0361452,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+Showing logs for build [32mjxbitcoder-jx-tutorial-master-r-9kwlf-2[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-lpcgz[0m
+{"level":"warn","ts":1584906981.4344475,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1584906981.4351814,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
 
-Showing logs for build [32mjxbitcoder-jx-tutorial-master-r-99tll-2[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-k5p5w[0m
-{"level":"warn","ts":1584275121.0900538,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
-{"level":"info","ts":1584275121.0943117,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+Showing logs for build [32mjxbitcoder-jx-tutorial-master-r-9kwlf-2[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-2cpd5[0m
+{"level":"warn","ts":1584906981.9391005,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1584906981.942295,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
 
-Showing logs for build [32mjxbitcoder-jx-tutorial-master-r-99tll-2[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+Showing logs for build [32mjxbitcoder-jx-tutorial-master-r-9kwlf-2[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
 
-Showing logs for build [32mjxbitcoder-jx-tutorial-master-r-99tll-2[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-jxbitcoder-jx-tutorial-master-r-99tll-dxjcb[0m
-{"level":"warn","ts":1584275128.1555984,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
-{"level":"info","ts":1584275129.200338,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/**bitcoder/**-tutorial.git @ v0.0.2 in path /workspace/source"}
+Showing logs for build [32mjxbitcoder-jx-tutorial-master-r-9kwlf-2[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-jxbitcoder-jx-tutorial-master-r-9kwlf-6hmkc[0m
+{"level":"warn","ts":1584906991.1853447,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1584906992.3085637,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/**bitcoder/**-tutorial.git @ v0.0.8 in path /workspace/source"}
 
-Showing logs for build [32mjxbitcoder-jx-tutorial-master-r-99tll-2[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
-Using SHAs from PULL_REFS=master:b2dc2495d1eba65501b60fbe00cd5f1d2c989a42
+Showing logs for build [32mjxbitcoder-jx-tutorial-master-r-9kwlf-2[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:decf8d702d34111c4454ea477564e9ee4308fe42
 WARNING: no SHAs to merge, falling back to initial cloned commit
 
-Showing logs for build [32mjxbitcoder-jx-tutorial-master-r-99tll-2[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Showing logs for build [32mjxbitcoder-jx-tutorial-master-r-9kwlf-2[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
 Generated Git credentials file /workspace/xdg_config/git/credentials
 
-Showing logs for build [32mjxbitcoder-jx-tutorial-master-r-99tll-2[0m stage [32mfrom-build-pack[0m and container [32mstep-build-make-build[0m
+Showing logs for build [32mjxbitcoder-jx-tutorial-master-r-9kwlf-2[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-step3[0m
+
+Showing logs for build [32mjxbitcoder-jx-tutorial-master-r-9kwlf-2[0m stage [32mfrom-build-pack[0m and container [32mstep-build-make-build[0m
 CGO_ENABLED=0 GO15VENDOREXPERIMENT=1 go build -ldflags '' -o bin/**-tutorial main.go
 
-Showing logs for build [32mjxbitcoder-jx-tutorial-master-r-99tll-2[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+Showing logs for build [32mjxbitcoder-jx-tutorial-master-r-9kwlf-2[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
 [36mINFO[0m[0000] No base image, nothing to extract            
 [36mINFO[0m[0000] cmd: EXPOSE                                  
 [36mINFO[0m[0000] Adding exposed port: 8080/tcp                
@@ -39,50 +41,64 @@ Showing logs for build [32mjxbitcoder-jx-tutorial-master-r-99tll-2[0m stage [
 [36mINFO[0m[0000] Using files from context: [/workspace/source/bin] 
 [36mINFO[0m[0000] COPY ./bin/ /                                
 [36mINFO[0m[0000] Taking snapshot of files...                  
-2020/03/15 12:25:45 pushed blob: sha256:f4e19ffeedff6ead7d3de9c2502b855215c0951e6f72d90d41e35f71a0e3e59f
-2020/03/15 12:25:45 pushed blob: sha256:1a07a27dbc83aa8dcbae231392941f7174e88662d8b5970feccf72b958bf6c83
-2020/03/15 12:25:47 gcr.io/api-project-173776728244/**-tutorial:0.0.2: digest: sha256:15741a06e7f5ff02d46e8be75f864a0fed4c0cb6616da8d2baebee97fd84a5a3 size: 428
+2020/03/22 19:56:51 pushed blob: sha256:d01b1e78ba1a4744cf4e415e3b3727935efd47a6e3766ff9a0fe5173fd882b31
+2020/03/22 19:56:51 pushed blob: sha256:2db63f2920af1a06d2ad741e04f1a0dca69ba1341a78cfce12423da24cc6639f
+2020/03/22 19:56:52 gcr.io/api-project-173776728244/**-tutorial:0.0.8: digest: sha256:c65099f053475f020390ce99dd08616889c949fd5879df691c88b52aa9f04183 size: 428
 
-Showing logs for build [32mjxbitcoder-jx-tutorial-master-r-99tll-2[0m stage [32mfrom-build-pack[0m and container [32mstep-build-post-build[0m
+Showing logs for build [32mjxbitcoder-jx-tutorial-master-r-9kwlf-2[0m stage [32mfrom-build-pack[0m and container [32mstep-build-post-build[0m
 no CVE provider running in the current ** namespace so skip adding image to be analysed
 
-Showing logs for build [32mjxbitcoder-jx-tutorial-master-r-99tll-2[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-changelog[0m
-Converted /workspace/source/charts/**-tutorial to an unshallow repository
-Generating change log from git ref d695501dc027dec2a3d2fb98ef050373bda46a63 => 13ea61c91d386e7b860a2311cf803a32cd63d08f
-Associating user x-0 in users.jenkins.io with email sergio.freire@xpand-it.com to git GitProvider user with login -0 as emails match
-Adding label jenkins.io/git-github-userid=-0 to user x-0 in users.jenkins.io
-WARNING: Failed to enrich commit 22747684aff3bd752fa6409052760079ad08e162 with issues: User.jenkins.io "x-0" is invalid: metadata.labels: Invalid value: "-0": a valid label must be an empty string or consist of alphanumeric characters, '-', '_' or '.', and must start and end with an alphanumeric character (e.g. 'MyValue',  or 'my_value',  or '12345', regex used for validation is '(([A-Za-z0-9][-A-Za-z0-9_.]*)?[A-Za-z0-9])?')
-Associating user x-0 in users.jenkins.io with email sergio.freire@xpand-it.com to git GitProvider user with login -0 as emails match
-Adding label jenkins.io/git-github-userid=-0 to user x-0 in users.jenkins.io
-WARNING: Failed to enrich commit 22747684aff3bd752fa6409052760079ad08e162 with issues: User.jenkins.io "x-0" is invalid: metadata.labels: Invalid value: "-0": a valid label must be an empty string or consist of alphanumeric characters, '-', '_' or '.', and must start and end with an alphanumeric character (e.g. 'MyValue',  or 'my_value',  or '12345', regex used for validation is '(([A-Za-z0-9][-A-Za-z0-9_.]*)?[A-Za-z0-9])?')
-Finding issues in commit messages using git format
-WARNING: No release found for **bitcoder/**-tutorial and tag v0.0.2 so creating a new release
-Updated the release information at https://github.com/**bitcoder/**-tutorial/releases/tag/v0.0.2
-generated: /workspace/source/charts/**-tutorial/templates/release.yaml
-Created Release **-tutorial-0-0-2 resource in namespace **
-Updating PipelineActivity **bitcoder-**-tutorial-master-2 with version 0.0.2
-Updated PipelineActivities **bitcoder-**-tutorial-master-2 with release notes URL: https://github.com/**bitcoder/**-tutorial/releases/tag/v0.0.2
+Showing logs for build [32mjxbitcoder-jx-tutorial-master-r-9kwlf-2[0m stage [32mfrom-build-pack[0m and container [32mstep-postbuild-step7[0m
 
-Showing logs for build [32mjxbitcoder-jx-tutorial-master-r-99tll-2[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-helm-release[0m
+Showing logs for build [32mjxbitcoder-jx-tutorial-master-r-9kwlf-2[0m stage [32mfrom-build-pack[0m and container [32mstep-postbuild-step8[0m
+
+Showing logs for build [32mjxbitcoder-jx-tutorial-master-r-9kwlf-2[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-changelog[0m
+Converted /workspace/source/charts/**-tutorial to an unshallow repository
+Generating change log from git ref 32dee034c5b2548702d28c1f30aefa8daf4b7c58 => 3d5f8dbcada8a03a3f9909c2c099aa6dfb357612
+Associating user x-0 in users.jenkins.io with email sergio.freire@xpand-it.com to git GitProvider user with login -0 as emails match
+Adding label jenkins.io/git-github-userid=-0 to user x-0 in users.jenkins.io
+WARNING: Failed to enrich commit 13594ca4618bb5375b7256b8508c36cee2884a3b with issues: User.jenkins.io "x-0" is invalid: metadata.labels: Invalid value: "-0": a valid label must be an empty string or consist of alphanumeric characters, '-', '_' or '.', and must start and end with an alphanumeric character (e.g. 'MyValue',  or 'my_value',  or '12345', regex used for validation is '(([A-Za-z0-9][-A-Za-z0-9_.]*)?[A-Za-z0-9])?')
+Associating user x-0 in users.jenkins.io with email sergio.freire@xpand-it.com to git GitProvider user with login -0 as emails match
+Adding label jenkins.io/git-github-userid=-0 to user x-0 in users.jenkins.io
+WARNING: Failed to enrich commit 13594ca4618bb5375b7256b8508c36cee2884a3b with issues: User.jenkins.io "x-0" is invalid: metadata.labels: Invalid value: "-0": a valid label must be an empty string or consist of alphanumeric characters, '-', '_' or '.', and must start and end with an alphanumeric character (e.g. 'MyValue',  or 'my_value',  or '12345', regex used for validation is '(([A-Za-z0-9][-A-Za-z0-9_.]*)?[A-Za-z0-9])?')
+Finding issues in commit messages using git format
+Associating user x-0 in users.jenkins.io with email sergio.freire@xpand-it.com to git GitProvider user with login -0 as emails match
+Adding label jenkins.io/git-github-userid=-0 to user x-0 in users.jenkins.io
+WARNING: Failed to enrich commit 4cfba26b5a1971cb7aa3c2a25a38448995a87228 with issues: User.jenkins.io "x-0" is invalid: metadata.labels: Invalid value: "-0": a valid label must be an empty string or consist of alphanumeric characters, '-', '_' or '.', and must start and end with an alphanumeric character (e.g. 'MyValue',  or 'my_value',  or '12345', regex used for validation is '(([A-Za-z0-9][-A-Za-z0-9_.]*)?[A-Za-z0-9])?')
+Associating user x-0 in users.jenkins.io with email sergio.freire@xpand-it.com to git GitProvider user with login -0 as emails match
+Adding label jenkins.io/git-github-userid=-0 to user x-0 in users.jenkins.io
+WARNING: Failed to enrich commit 4cfba26b5a1971cb7aa3c2a25a38448995a87228 with issues: User.jenkins.io "x-0" is invalid: metadata.labels: Invalid value: "-0": a valid label must be an empty string or consist of alphanumeric characters, '-', '_' or '.', and must start and end with an alphanumeric character (e.g. 'MyValue',  or 'my_value',  or '12345', regex used for validation is '(([A-Za-z0-9][-A-Za-z0-9_.]*)?[A-Za-z0-9])?')
+WARNING: No release found for **bitcoder/**-tutorial and tag v0.0.8 so creating a new release
+Updated the release information at https://github.com/**bitcoder/**-tutorial/releases/tag/v0.0.8
+generated: /workspace/source/charts/**-tutorial/templates/release.yaml
+Created Release **-tutorial-0-0-8 resource in namespace **
+Updating PipelineActivity **bitcoder-**-tutorial-master-2 with version 0.0.8
+Updated PipelineActivities **bitcoder-**-tutorial-master-2 with release notes URL: https://github.com/**bitcoder/**-tutorial/releases/tag/v0.0.8
+
+Showing logs for build [32mjxbitcoder-jx-tutorial-master-r-9kwlf-2[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-helm-release[0m
 WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
 Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
 Successfully added Helm repository storage.googleapis.com.
 Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
 Successfully added Helm repository jenkins-x-chartmuseum.
 WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
-Uploading chart file **-tutorial-0.0.2.tgz to http://jenkins-x-chartmuseum:8080/api/charts
+Uploading chart file **-tutorial-0.0.8.tgz to http://jenkins-x-chartmuseum:8080/api/charts
 Received 201 response: {"saved":true}
 
-Showing logs for build [32mjxbitcoder-jx-tutorial-master-r-99tll-2[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-jx-promote[0m
+Showing logs for build [32mjxbitcoder-jx-tutorial-master-r-9kwlf-2[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-jx-promote[0m
 WARNING: prow based install so skip waiting for the merge of Pull Requests to go green as currently there is an issue with gettingstatuses from the PR, see https://github.com/jenkins-x/**/issues/2410
 WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
-Promoting app **-tutorial version 0.0.2 to namespace **-staging
+Promoting app **-tutorial version 0.0.8 to namespace **-staging
 WARNING: 
-Created Pull Request: https://github.com/**bitcoder/environment-cluster1-staging/pull/2
-Added label updatebot to Pull Request https://github.com/**bitcoder/environment-cluster1-staging/pull/2
-got git provider status pending from PR https://github.com/**bitcoder/environment-cluster1-staging/pull/2
-got git provider status pending from PR https://github.com/**bitcoder/environment-cluster1-staging/pull/2
-got git provider status pending from PR https://github.com/**bitcoder/environment-cluster1-staging/pull/2
-got git provider status pending from PR https://github.com/**bitcoder/environment-cluster1-staging/pull/2
-Pull Request https://github.com/**bitcoder/environment-cluster1-staging/pull/2 is merged at sha b0d9ef9ec2e8463625fea776321dde9d6a2beab1
+Created Pull Request: https://github.com/**bitcoder/environment-cluster1-staging/pull/8
+Added label updatebot to Pull Request https://github.com/**bitcoder/environment-cluster1-staging/pull/8
+got git provider status pending from PR https://github.com/**bitcoder/environment-cluster1-staging/pull/8
+got git provider status pending from PR https://github.com/**bitcoder/environment-cluster1-staging/pull/8
+got git provider status pending from PR https://github.com/**bitcoder/environment-cluster1-staging/pull/8
+got git provider status pending from PR https://github.com/**bitcoder/environment-cluster1-staging/pull/8
+Pull Request https://github.com/**bitcoder/environment-cluster1-staging/pull/8 is merged at sha e41a9a9aa4d389c3efad23edd188e6e956f446f5
 Pull Request merged but we are not waiting for the update pipeline to complete!
+
+Showing logs for build [32mjxbitcoder-jx-tutorial-master-r-9kwlf-2[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-step12[0m
+
+Showing logs for build [32mjxbitcoder-jx-tutorial-master-r-9kwlf-2[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-step13[0m
