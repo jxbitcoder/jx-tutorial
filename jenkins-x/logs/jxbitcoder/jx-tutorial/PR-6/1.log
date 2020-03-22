@@ -1,0 +1,231 @@
+
+Showing logs for build [32mjxbitcoder-jx-tutorial-pr-6-pr-b26k9-1[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-5sm4j[0m
+{"level":"warn","ts":1584904864.6132195,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1584904864.613777,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mjxbitcoder-jx-tutorial-pr-6-pr-b26k9-1[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-tt4tm[0m
+{"level":"warn","ts":1584904865.6095898,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1584904865.6131477,"logger":"fallback-logger","caller":"bash/main.go:64","msg":"Successfully executed command \"sh -c mkdir -p /workspace/source\"; output "}
+
+Showing logs for build [32mjxbitcoder-jx-tutorial-pr-6-pr-b26k9-1[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mjxbitcoder-jx-tutorial-pr-6-pr-b26k9-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-jxbitcoder-jx-tutorial-pr-6-pr-b26k9-rvxqg[0m
+{"level":"warn","ts":1584904877.7584224,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/0.8.0-**-support-backwards-incompats\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1584904878.9175928,"logger":"fallback-logger","caller":"git/git.go:103","msg":"Successfully cloned https://github.com/**bitcoder/**-tutorial.git @ master in path /workspace/source"}
+
+Showing logs for build [32mjxbitcoder-jx-tutorial-pr-6-pr-b26k9-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:5086b9cd17b45b06c206d857828e63476cdce540,6:77a79eea5c2040a053a1af2f19ae17bbcf06251e
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git fetch origin --unshallow 77a79eea5c2040a053a1af2f19ae17bbcf06251e: 5086b9cd17b45b06c206d857828e63476cdce540:
+DEBUG: ran git fetch --unshallow origin 77a79eea5c2040a053a1af2f19ae17bbcf06251e: 5086b9cd17b45b06c206d857828e63476cdce540: in 
+DEBUG: JX_LOG_LEVEL=error LC_ALL=C git branch
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git checkout master
+DEBUG: ran git checkout master in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git reset --hard 5086b9cd17b45b06c206d857828e63476cdce540
+DEBUG: ran git reset --hard 5086b9cd17b45b06c206d857828e63476cdce540 in 
+DEBUG: JX_LOG_LEVEL=error LC_ALL=C git clean -fd .
+DEBUG: ran clean --force -d . in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git merge 77a79eea5c2040a053a1af2f19ae17bbcf06251e
+DEBUG: ran git merge 77a79eea5c2040a053a1af2f19ae17bbcf06251e in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git log --format=%H%x1f%an%x1f%ae%x1f%cn%x1f%ce%x1f%s%n%b%x1e 5086b9cd17b45b06c206d857828e63476cdce540..HEAD
+Merged SHA 0d36a083101339a34fbd8e99f7ca0aee52f468a6 with commit message 'Merge commit '77a79eea5c2040a053a1af2f19ae17bbcf06251e'' into base branch master
+Merged SHA 77a79eea5c2040a053a1af2f19ae17bbcf06251e with commit message 'x' into base branch master
+
+Showing logs for build [32mjxbitcoder-jx-tutorial-pr-6-pr-b26k9-1[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-step2[0m
+
+Showing logs for build [32mjxbitcoder-jx-tutorial-pr-6-pr-b26k9-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-make-linux[0m
+CGO_ENABLED=0 GOOS=linux GOARCH=amd64 GO15VENDOREXPERIMENT=1 go build -ldflags '' -o bin/**-tutorial main.go
+
+Showing logs for build [32mjxbitcoder-jx-tutorial-pr-6-pr-b26k9-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+[36mINFO[0m[0000] No base image, nothing to extract            
+[36mINFO[0m[0000] cmd: EXPOSE                                  
+[36mINFO[0m[0000] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0000] Using files from context: [/workspace/source/bin] 
+[36mINFO[0m[0000] Skipping unpacking as no commands require it. 
+[36mINFO[0m[0000] Taking snapshot of full filesystem...        
+[36mINFO[0m[0000] EXPOSE 8080                                  
+[36mINFO[0m[0000] cmd: EXPOSE                                  
+[36mINFO[0m[0000] Adding exposed port: 8080/tcp                
+[36mINFO[0m[0000] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0000] ENTRYPOINT ["/**-tutorial"]                  
+[36mINFO[0m[0000] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0000] Using files from context: [/workspace/source/bin] 
+[36mINFO[0m[0000] COPY ./bin/ /                                
+[36mINFO[0m[0000] Taking snapshot of files...                  
+2020/03/22 19:21:40 pushed blob: sha256:92209ed8e290a809e539d736c96a2bbc0b5d013fdd4936406bb0261998d77ab6
+2020/03/22 19:21:40 pushed blob: sha256:e3fa3a0922ad5ab7e594114fbc5fa90b65e354f0fd887b144205af314796da4e
+2020/03/22 19:21:42 gcr.io/api-project-173776728244/**-tutorial:0.0.0-SNAPSHOT-PR-6-1: digest: sha256:3885304ebd0860b96060847f4a3a37ca9c1923b0fe1f87790f08931e2bae7b26 size: 428
+
+Showing logs for build [32mjxbitcoder-jx-tutorial-pr-6-pr-b26k9-1[0m stage [32mfrom-build-pack[0m and container [32mstep-postbuild-post-build[0m
+no CVE provider running in the current ** namespace so skip adding image to be analysed
+
+Showing logs for build [32mjxbitcoder-jx-tutorial-pr-6-pr-b26k9-1[0m stage [32mfrom-build-pack[0m and container [32mstep-postbuild-step6[0m
+
+Showing logs for build [32mjxbitcoder-jx-tutorial-pr-6-pr-b26k9-1[0m stage [32mfrom-build-pack[0m and container [32mstep-postbuild-step7[0m
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+
+
+
+
+
+
+
+
+
+
+<html>
+
+<head>
+    <title>Unauthorized (401)</title>
+    
+
+
+
+<!--[if IE]><![endif]-->
+<script type="text/javascript">
+    (function() {
+        var contextPath = '';
+        var eventBuffer = [];
+
+        function printDeprecatedMsg() {
+            if (console && console.warn) {
+                console.warn('DEPRECATED JS - contextPath global variable has been deprecated since 7.4.0. Use `wrm/context-path` module instead.');
+            }
+        }
+
+        function sendEvent(analytics, postfix) {
+            analytics.send({
+                name: 'js.globals.contextPath.' + postfix
+            });
+        }
+
+        function sendDeprecatedEvent(postfix) {
+            try {
+                var analytics = require('jira/analytics');
+                if (eventBuffer.length) {
+                    eventBuffer.forEach(function(value) {
+                        sendEvent(analytics, value);
+                    });
+                    eventBuffer = [];
+                }
+
+                if (postfix) {
+                    sendEvent(analytics, postfix);
+                }
+            } catch(ex) {
+                eventBuffer.push(postfix);
+                setTimeout(sendDeprecatedEvent, 1000);
+            }
+        }
+
+        Object.defineProperty(window, 'contextPath', {
+            get: function() {
+                printDeprecatedMsg();
+                sendDeprecatedEvent('get');
+                return contextPath;
+            },
+            set: function(value) {
+                printDeprecatedMsg();
+                sendDeprecatedEvent('set');
+                contextPath = value;
+            }
+        });
+    })();
+
+</script>
+<script>
+window.WRM=window.WRM||{};window.WRM._unparsedData=window.WRM._unparsedData||{};window.WRM._unparsedErrors=window.WRM._unparsedErrors||{};
+WRM._unparsedData["com.atlassian.plugins.atlassian-plugins-webresource-plugin:context-path.context-path"]="\"\"";
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0100 22980    0 22270  100   710  84193   2684 --:--:-- --:--:-- --:--:-- 84356
+WRM._unparsedData["jira.core:feature-flags-data.feature-flag-data"]="{\"enabled-feature-keys\":[\"com.atlassian.jira.agile.darkfeature.editable.detailsview\",\"nps.survey.inline.dialog\",\"com.atlassian.jira.agile.darkfeature.edit.closed.sprint.enabled\",\"jira.plugin.devstatus.phasetwo\",\"jira.frother.reporter.field\",\"atlassian.rest.xsrf.legacy.enabled\",\"jira.issue.status.lozenge\",\"com.atlassian.jira.config.BIG_PIPE\",\"com.atlassian.jira.projects.issuenavigator\",\"com.atlassian.jira.config.PDL\",\"jira.plugin.devstatus.phasetwo.enabled\",\"atlassian.aui.raphael.disabled\",\"app-switcher.new\",\"frother.assignee.field\",\"sd.internal.base.off.thread.on.completion.events.enabled\",\"com.atlassian.jira.projects.ProjectCentricNavigation.Switch\",\"jira.onboarding.cyoa\",\"sd.slavalue.record.updated.date.enabled\",\"com.atlassian.jira.agile.darkfeature.kanplan.enabled\",\"com.atlassian.jira.config.ProjectConfig.MENU\",\"com.atlassian.jira.projects.sidebar.DEFER_RESOURCES\",\"com.atlassian.jira.agile.darkfeature.kanplan.epics.and.versions.enabled\",\"com.atlassian.jira.agile.darkfeature.sprint.goal.enabled\",\"jira.zdu.*****-updates-ui\",\"jira.zdu.jmx-monitoring\",\"sd.sla.improved.rendering.enabled\",\"sd.canned.responses.enabled\",\"mail.batching.enabled\",\"sd.new.settings.sidebar.location.disabled\",\"jira.onboarding.feature.disabled\",\"jira.zdu.cluster-upgrade-state\",\"com.atlassian.jira.agile.darkfeature.splitissue\",\"com.atlassian.jira.config.CoreFeatures.LICENSE_ROLES_ENABLED\",\"jira.export.csv.enabled\"],\"feature-flag-states\":{\"sd.customer.portal.transitions\":true,\"sd.automation.then.action.edit.issue.custom.fields\":true,\"sd.custom.email.stripping.rules\":false,\"com.atlassian.jira.diagnostics.perflog\":true,\"com.atlassian.jira.issuetable.move.links.hidden\":true,\"jira.renderer.consider.variable.format\":true,\"com.atlassian.jira.user.dbIdBasedKeyGenerationStrategy\":true,\"com.atlassian.jira.sharedEntityEditRights\":true,\"sd.automation.then.webhook.custom.payload\":true,\"sd.use.search.by.permissions\":true,\"com.atlassian.jira.agile.darkfeature.sprint.goal\":false,\"sd.automation.ruleset.cache\":true,\"sd.automation.psmq.async.executor\":true,\"sd.customer.org.list.page.lazy.search\":true,\"sd.approval.requested.when.handler\":true,\"com.atlassian.jira.custom.csv.escaper\":true,\"sd.request.type.field.rest.api.filtering.bugfix\":true,\"sd.adgs.m1\":true,\"com.atlassian.jira.plugin.issuenavigator.filtersUxImprovment\":true,\"com.atlassian.jira.agile.darkfeature.kanplan.epics.and.versions\":false,\"sd.automation.then.action.archive.issue\":true,\"sd.sla.performance.optimization\":true,\"sd.sla.agent.jql.security.restricted\":true,\"sd.cluster.safe.mail.channel.shutdown\":true,\"com.atlassian.jira.issues.archiving.filters\":false,\"mail.batching.override.core\":true,\"sd.email.analytics.open\":false,\"sd.automation.audit.log\":true,\"jira.jql.suggestrecentfields\":false,\"com.atlassian.jira.gdpr.rtbf\":false,\"sd.workinghours.react.component\":false,\"sd.dismiss.all.misconfiguration.warnings.setting\":true,\"com.atlassian.jira.agile.darkfeature.optimistic.transitions\":true,\"sd.sla.configurations.export\":true,\"sd.canned.responses.variable.substitution\":true,\"com.atlassian.jira.agile.darkfeature.kanplan\":false,\"jira.customfields.paginated.ui\":true,\"com.atlassian.jira.agile.darkfeature.edit.closed.sprint\":false,\"sd.email.outsider.comments\":true,\"jira.create.linked.issue\":true,\"jira.sal.host.connect.accessor.existing.transaction.will.create.transactions\":true,\"sd.automation.project.runasuser.cache\":true,\"sd.automation.then.webhook\":true,\"sd.priorities.per.project\":true,\"sd.customerportal.customization\":false,\"external.links.new.window\":true,\"jira.quick.search\":true,\"sd.respect.inline.edit.issue.off\":true,\"jira.jql.smartautoselectfirst\":false,\"sd.customer.portal.browse.permission.only\":true,\"sd.inline.noformat.renderer\":true,\"sd.customer.profile.multi.languages\":true,\"sd.sla.lucene.issue.id.callback.performance\":true,\"sd.new.settings.sidebar.location\":true,
+\"atlassian.cdn.static.assets\":true,\"sd.customer.search.post.agent.filtering\":true,\"sd.sla.improved.rendering\":false,\"mail.batching\":false,\"sd.frontend.driven.webpanels\":true,\"sd.users.and.roles.new.page\":false,\"sd.customer.feedback.validate.reporter.on.token\":true,\"sd.custom.email.notifications.utf8.csat.star\":true,\"sd.kb.use.new.page.analytics.rest.endpoints\":true,\"jira.priorities.per.project.edit.default\":false,\"sd.who.create.customers.by.email.setting\":true,\"jira.priorities.per.project.jsd\":true,\"sd.email.attachment.stripping\":false,\"sd.canned.responses\":false,\"sd.portal.help.center.customer.signup.secondary.email\":true,\"com.atlassian.jira.agile.darkfeature.rapid.boards.bands\":true,\"com.atlassian.jira.agile.darkfeature.flexible.boards\":true,\"sd.slavalue.record.updated.date\":false,\"sd.report.custom.date.range\":false,\"jira.dc.lock.leasing\":true,\"sd.portal.help.center.customer.signup.secondary.email.fallback\":true,\"mail.batching.create.section.cf\":true,\"sd.workinghours.new.page.bulldog.1\":false,\"sd.customer.portal.two.step.login\":false,\"sd.internal.bounded.off.thread.on.completion.events\":true,\"sd.automation.then.action.auto.answer.approval\":true,\"sd.approvals.notification.email.action\":true,\"com.atlassian.jira.upgrade.startup.fix.index\":true,\"sd.customer.notifications.suppress.welcome.email\":true,\"sd.portal.help.center.customer.signup\":true,\"sd.sla.fix.timeline\":false,\"sd.email.channel.folders\":false,\"sd.attachment.generate.unique.suffix.when.attachment.filename.clash.occurs\":true,\"sd.workinghours.new.page\":true,\"sd.sla.parallel.recalculation\":false,\"com.atlassian.jira.issuetable.draggable\":true,\"sd.kb.article.insights.report\":true,\"sd.customerportal.customization.preview\":true,\"com.atlassian.jira.agile.darkfeature.kanban.hide.old.done.issues\":true,\"sd.attachment.is.viewable.short.circuit\":true,\"sd.canned.responses.check.index.startup\":false,\"sd.sla.conditions.due.date\":true,\"com.atlassian.jira.agile.darkfeature.backlog.showmore\":true,\"sd.automation.clean.deleted.projects.on.launch\":true,\"sd.custom.email.notifications.custom.rules.simple.ui\":false,\"sd.sla.parallel.recalculation.run.in.new.searcher.context\":true,\"sd.customer.portal.prioties.per.project.fix\":true,\"sd.internal.base.off.thread.on.completion.events\":false,\"com.atlassian.jira.issues.archiving.browse\":true,\"jira.instrumentation.laas\":false,\"sd.no.schedule.async.upgrade.tasks\":true,\"mail.batching.user.notification\":true,\"com.atlassian.jira.agile.darkfeature.dataonpageload\":true,\"com.atlassian.jira.projects.per.project.permission.query\":true,\"com.atlassian.jira.issues.archiving\":true,\"sd.automation.if.condition.comment.primary.action\":true,\"index.use.snappy\":true,\"jira.priorities.per.project\":true}}";
+WRM._unparsedData["jira.core:default-comment-security-level-data.DefaultCommentSecurityLevelHelpLink"]="{\"extraClasses\":\"default-comment-level-help\",\"title\":\"Commenting on an Issue\",\"url\":\"https://docs.atlassian.com/jira/jcore-docs-085/Editing+and+collaborating+on+issues#Editingandcollaboratingonissues-restrictacomment\",\"isLocal\":false}";
+WRM._unparsedData["com.atlassian.analytics.analytics-client:policy-update-init.policy-update-data-provider"]="false";
+WRM._unparsedData["com.atlassian.analytics.analytics-client:programmatic-analytics-init.programmatic-analytics-data-provider"]="false";
+WRM._unparsedData["jira.core:dateFormatProvider.allFormats"]="{\"dateFormats\":{\"meridiem\":[\"AM\",\"PM\"],\"eras\":[\"BC\",\"AD\"],\"months\":[\"January\",\"February\",\"March\",\"April\",\"May\",\"June\",\"July\",\"August\",\"September\",\"October\",\"November\",\"December\"],\"monthsShort\":[\"Jan\",\"Feb\",\"Mar\",\"Apr\",\"May\",\"Jun\",\"Jul\",\"Aug\",\"Sep\",\"Oct\",\"Nov\",\"Dec\"],\"weekdaysShort\":[\"Sun\",\"Mon\",\"Tue\",\"Wed\",\"Thu\",\"Fri\",\"Sat\"],\"weekdays\":[\"Sunday\",\"Monday\",\"Tuesday\",\"Wednesday\",\"Thursday\",\"Friday\",\"Saturday\"]},\"lookAndFeelFormats\":{\"relativize\":\"true\",\"time\":\"h:mm a\",\"day\":\"EEEE h:mm a\",\"dmy\":\"dd/MMM/yy\",\"complete\":\"dd/MMM/yy h:mm a\"}}";
+WRM._unparsedData["com.atlassian.servicedesk.servicedesk-canned-responses-plugin:canned-responses-data-provider.data"]="{\"substitutionVariables\":{\"issue.summary\":\"Issue summary\",\"issue.description\":\"Issue description\",\"issue.key\":\"Issue key\",\"issue.reporter.name\":\"Issue reporter\",\"issue.resolution\":\"Issue resolution\",\"request.url\":\"Request URL\",\"request.status\":\"Request status\",\"request.details\":\"Request details\"}}";
+WRM._unparsedData["jira.core:avatar-picker-data.data"]="{}";
+WRM._unparsedData["com.atlassian.jira.jira-header-plugin:dismissedFlags.flags"]="{\"dismissed\":[]}";
+WRM._unparsedData["com.atlassian.jira.jira-header-plugin:newsletter-signup-tip-init.newsletterSignup"]="{\"signupDescription\":\"Get updates, inspiration and best practices from the team behind Jira.\",\"formUrl\":\"https://www.atlassian.com/apis/exact-target/{0}/subscribe?mailingListId=1401671\",\"signupTitle\":\"Sign up!\",\"signupId\":\"newsletter-signup-tip\",\"showNewsletterTip\":false}";
+WRM._unparsedData["com.atlassian.jira.project-templates-plugin:project-templates-plugin-resources.ptAnalyticsData"]="{\"instanceCreatedDate\":\"2013-09-04\"}";
+WRM._unparsedData["jira.core:jqlautocomplete-data.jql.autocomplete.recentFields"]="{\"key\":\"jqlValues\",\"value\":[\"affectedVersion\",\"assignee\",\"component\",\"description\",\"issue\",\"labels\",\"parent\",\"priority\",\"project\",\"reporter\",\"resolution\",\"status\",\"summary\",\"type\",\"watcher\"]}";
+WRM._unparsedData["com.atlassian.servicedesk.core-ui:util-help-links.help-links"]="{\"help\":{\"email.settings\":\"https://docs.atlassian.com/jira/jsd-docs-045/Receiving+requests+by+email\",\"email.setup\":\"https://docs.atlassian.com/jira/jsd-docs-045/Receiving+requests+by+email\",\"managing.queues\":\"https://docs.atlassian.com/jira/jsd-docs-045/Setting+up+queues+for+your+team\",\"sla.calendar.settings\":\"https://docs.atlassian.com/jira/jsd-docs-045/Create+and+edit+SLA+calendars\",\"request.settings.help.bubble\":\"https://docs.atlassian.com/jira/jsd-docs-045/Managing+access+to+your+service+desk\",\"email.settings.suitablerequest\":\"https://docs.atlassian.com/jira/jsd-docs-045/Receiving+requests+by+email#Receivingrequestsbyemail-suitablerequest\",\"sla.import.help\":\"https://docs.atlassian.com/jira/jsd-docs-045/Importing+SLAs\",\"documentation.home\":\"https://docs.atlassian.com/jira/jsd-docs-045/JIRA+Service+Desk+Documentation\",\"create.space.help\":\"https://docs.atlassian.com/jira/jsd-docs-045/Knowledge+base+settings+and+permissions\",\"default\":\"https://docs.atlassian.com/jira/jsd-docs-045/\",\"*****.notifications.config\":\"https://docs.atlassian.com/jira/jsd-docs-045/Managing+service+desk+notifications\",\"email.settings.troubleshooting\":\"https://docs.atlassian.com/jira/jsd-docs-045/Troubleshooting+issues+with+the+email+channel\",\"advanced.approval.notifications\":\"https://docs.atlassian.com/jira/jsd-docs-045/Approving+a+service+desk+request\",\"troubleshoot.requesttype\":\"https://docs.atlassian.com/jira/jsd-docs-045/Troubleshooting+issues+with+request+types\",\"approvals.configuration\":\"https://docs.atlassian.com/jira/jsd-docs-045/Configuring+JIRA+Service+Desk+approvals\",\"setting.up.reports\":\"https://docs.atlassian.com/jira/jsd-docs-045/Setting+up+service+desk+reports\",\"public.signup\":\"https://docs.atlassian.com/jira/jsd-docs-045/Configuring+public+signup\",\"resolve.permission.scheme.errors\":\"https://docs.atlassian.com/jira/jsd-docs-045/Resolving+permission+scheme+errors\",\"knowledge.base\":\"https://docs.atlassian.com/jira/jsd-docs-045/Set+up+a+knowledge+base+for+self-service\",\"getting.started\":\"https://docs.atlassian.com/jira/jsd-docs-045/Getting+started+with+JIRA+Service+Desk\",\"getting.started.agent\":\"https://docs.atlassian.com/jira/jsd-docs-045/Getting+started+for+service+desk+agents\",\"invite.customers\":\"https://docs.atlassian.com/jira/jsd-docs-045/Managing+access+to+your+service+desk\",\"sla.setup.help\":\"https://docs.atlassian.com/jira/jsd-docs-045/Setting+up+SLAs\"},\"kb\":{\"default\":\"https://confluence.atlassian.com/display/SDKB/\",\"troubleshooting.user.management.issues\":\"https://confluence.atlassian.com/display/SDKB/Troubleshooting+issues+with+service+desk+user+management\",\"legacytransition\":\"https://confluence.atlassian.com/display/SDKB/Replacing+legacy+automatic+transitions+with+automation+rules\",\"umtroubleshoot\":\"https://confluence.atlassian.com/display/SDKB/Troubleshooting+issues+with+service+desk+user+management\"}}";
+WRM._unparsedData["com.atlassian.servicedesk.core-ui:util-base-url.base-url"]="\"https://sandbox.xpand-it.com\"";
+WRM._unparsedData["jira.core:user-message-flags-data.*****Lockout"]="{}";
+WRM._unparsedData["com.atlassian.plugins.helptips.jira-help-tips:help-tip-manager.JiraHelpTipData"]="{\"anonymous\":true}";
+if(window.WRM._dataArrived)window.WRM._dataArrived();</script>
+<link type="text/css" rel="stylesheet" href="/s/e06ab1f4410610b45a6a59e7b7c16d42-CDN/6n9yhz/805001/6411e0087192541a09d88223fb51a6a0/e5dce8c22f35f6ae877a09c446155e80/_/download/contextbatch/css/_super/batch.css" data-wrm-key="_super" data-wrm-batch-type="context" media="all">
+<link type="text/css" rel="stylesheet" href="/s/3b2d00d942700ae1b6e421b6a03f97ef-CDN/6n9yhz/805001/6411e0087192541a09d88223fb51a6a0/79785c4f2778ec156d1fca9842c2c63f/_/download/contextbatch/css/atl.general,jira.global,jira.general,atl.global,-_super/batch.css?agile_global_*****_condition=true&amp;jag=true" data-wrm-key="atl.general,jira.global,jira.general,atl.global,-_super" data-wrm-batch-type="context" media="all">
+<link type="text/css" rel="stylesheet" href="/s/d41d8cd98f00b204e9800998ecf8427e-CDN/6n9yhz/805001/6411e0087192541a09d88223fb51a6a0/6.2.4/_/download/resources/com.xpandit.plugins.jiraxporter:resourceComponents/jiraxporter-plugin.css?batch=false" data-wrm-key="com.xpandit.plugins.jiraxporter:resourceComponents" data-wrm-batch-type="resource" media="all">
+<link type="text/css" rel="stylesheet" href="/s/d41d8cd98f00b204e9800998ecf8427e-CDN/6n9yhz/805001/6411e0087192541a09d88223fb51a6a0/6.2.4/_/download/resources/com.xpandit.plugins.jiraxporter:resourceComponents/jiraxporter-progress.css?batch=false" data-wrm-key="com.xpandit.plugins.jiraxporter:resourceComponents" data-wrm-batch-type="resource" media="all">
+<link type="text/css" rel="stylesheet" href="/s/d41d8cd98f00b204e9800998ecf8427e-CDN/6n9yhz/805001/6411e0087192541a09d88223fb51a6a0/6.2.4/_/download/resources/com.xpandit.plugins.jiraxporter:xporter-menu-search-screen/jiraxporter-plugin.css?batch=false" data-wrm-key="com.xpandit.plugins.jiraxporter:xporter-menu-search-screen" data-wrm-batch-type="resource" media="all">
+<link type="text/css" rel="stylesheet" href="/s/d41d8cd98f00b204e9800998ecf8427e-CDN/6n9yhz/805001/6411e0087192541a09d88223fb51a6a0/6.2.4/_/download/resources/com.xpandit.plugins.jiraxporter:xporter-menu-search-screen/jiraxporter-icons.css?batch=false" data-wrm-key="com.xpandit.plugins.jiraxporter:xporter-menu-search-screen" data-wrm-batch-type="resource" media="all">
+<link type="text/css" rel="stylesheet" href="/s/d41d8cd98f00b204e9800998ecf8427e-CDN/6n9yhz/805001/6411e0087192541a09d88223fb51a6a0/8.5.0/_/download/batch/com.atlassian.auiplugin:split_aui.pattern.label/com.atlassian.auiplugin:split_aui.pattern.label.css" data-wrm-key="com.atlassian.auiplugin:split_aui.pattern.label" data-wrm-batch-type="resource" media="all">
+<link type="text/css" rel="stylesheet" href="/s/d41d8cd98f00b204e9800998ecf8427e-CDN/6n9yhz/805001/6411e0087192541a09d88223fb51a6a0/8.5.0/_/download/batch/com.atlassian.auiplugin:split_aui.splitchunk.16f099a0da/com.atlassian.auiplugin:split_aui.splitchunk.16f099a0da.css" data-wrm-key="com.atlassian.auiplugin:split_aui.splitchunk.16f099a0da" data-wrm-batch-type="resource" media="all">
+<link type="text/css" rel="stylesheet" href="/s/179b74b5013574964e494ae41eb0f4c6-CDN/6n9yhz/805001/6411e0087192541a09d88223fb51a6a0/1.0/_/download/batch/jira.webresources:global-static-adgs/jira.webresources:global-static-adgs.css" data-wrm-key="jira.webresources:global-static-adgs" data-wrm-batch-type="resource" media="all">
+<link type="text/css" rel="stylesheet" href="/s/616c9fc4ca7c02b8f955962053f91f22-CDN/6n9yhz/805001/6411e0087192541a09d88223fb51a6a0/1.0/_/download/batch/jira.webresources:global-static/jira.webresources:global-static.css" data-wrm-key="jira.webresources:global-static" data-wrm-batch-type="resource" media="all">
+<script type="text/javascript" src="/s/a3b2ada63683de7fe5fcd22a83077d58-CDN/6n9yhz/805001/6411e0087192541a09d88223fb51a6a0/e5dce8c22f35f6ae877a09c446155e80/_/download/contextbatch/js/_super/batch.js?locale=en-US" data-wrm-key="_super" data-wrm-batch-type="context" data-initially-rendered></script>
+<script type="text/javascript" src="/s/ce3a00e0f84650a74a7b95f961d57653-CDN/6n9yhz/805001/6411e0087192541a09d88223fb51a6a0/79785c4f2778ec156d1fca9842c2c63f/_/download/contextbatch/js/atl.general,jira.global,jira.general,atl.global,-_super/batch.js?agile_global_*****_condition=true&amp;jag=true&amp;locale=en-US" data-wrm-key="atl.general,jira.global,jira.general,atl.global,-_super" data-wrm-batch-type="context" data-initially-rendered></script>
+<script type="text/javascript" src="/s/beab0fe4655bc5967f149c93d0960591-CDN/6n9yhz/805001/6411e0087192541a09d88223fb51a6a0/8.5.0/_/download/batch/com.atlassian.auiplugin:split_aui.pattern.label/com.atlassian.auiplugin:split_aui.pattern.label.js?locale=en-US" data-wrm-key="com.atlassian.auiplugin:split_aui.pattern.label" data-wrm-batch-type="resource" data-initially-rendered></script>
+<script type="text/javascript" src="/s/beab0fe4655bc5967f149c93d0960591-CDN/6n9yhz/805001/6411e0087192541a09d88223fb51a6a0/8.5.0/_/download/batch/com.atlassian.auiplugin:split_aui.splitchunk.16f099a0da/com.atlassian.auiplugin:split_aui.splitchunk.16f099a0da.js?locale=en-US" data-wrm-key="com.atlassian.auiplugin:split_aui.splitchunk.16f099a0da" data-wrm-batch-type="resource" data-initially-rendered></script>
+<script type="text/javascript" src="/s/beab0fe4655bc5967f149c93d0960591-CDN/6n9yhz/805001/6411e0087192541a09d88223fb51a6a0/8.5.0/_/download/batch/com.atlassian.auiplugin:split_aui.pattern.table/com.atlassian.auiplugin:split_aui.pattern.table.js?locale=en-US" data-wrm-key="com.atlassian.auiplugin:split_aui.pattern.table" data-wrm-batch-type="resource" data-initially-rendered></script>
+<link type="text/css" rel="stylesheet" href="/s/1d3c2301e50273ca2159ec9ad581c356-CDN/6n9yhz/805001/6411e0087192541a09d88223fb51a6a0/ccab07630b370e43a1308ad28e18266b/_/download/contextbatch/css/jira.global.look-and-feel,-_super/batch.css" data-wrm-key="jira.global.look-and-feel,-_super" data-wrm-batch-type="context" media="all">
+
+<script type="text/javascript" src="/rest/api/1.0/shortcuts/805001/cc939a25062cf29f3313c48ab1b3d725/shortcuts.js"></script>
+
+
+    <meta name="application-name" content="JIRA" data-name="jira" data-version="8.5.1">
+</head>
+<body id="jira" class="aui-layout aui-style-default page-type-message"  data-version="8.5.1" >
+    <div class="aui-page-panel"><div class="aui-page-panel-inner">
+            <section class="aui-page-panel-content">
+                    <header class="aui-page-header"><div class="aui-page-header-inner">
+                            <div class="aui-page-header-main">
+                                    <h1>Unauthorized (401)</h1>
+                                </div><!-- .aui-page-header-main -->
+                        </div><!-- .aui-page-header-inner --></header><!-- .aui-page-header -->
+                    <div class="aui-message aui-message-warning warning">
+                            <p>Encountered a <code>&quot;401 - Unauthorized&quot;</code> error while loading this page.</p>
+                            <p>Basic Authentication Failure - Reason : AUTHENTICATED_FAILED</p>
+                            <p><a href="/secure/MyJiraHome.jspa">Go to Jira home</a></p>
+                        </div>
+                </section><!-- .aui-page-panel-content -->
+        </div><!-- .aui-page-panel-inner --></div><!-- .aui-page-panel -->
+</body>
+</html>
+
+Showing logs for build [32mjxbitcoder-jx-tutorial-pr-6-pr-b26k9-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-make-preview[0m
+sed -i -e "s/version:.*/version: 0.0.0-SNAPSHOT-PR-6-1/" Chart.yaml
+sed -i -e "s/version:.*/version: 0.0.0-SNAPSHOT-PR-6-1/" ../*/Chart.yaml
+sed -i -e "s|repository:.*|repository: gcr.io\/api-project-173776728244\/**-tutorial|" values.yaml
+sed -i -e "s/tag:.*/tag: 0.0.0-SNAPSHOT-PR-6-1/" values.yaml
+echo "  version: 0.0.0-SNAPSHOT-PR-6-1" >> requirements.yaml
+** step helm build
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: chartmuseum.jenkins-x.io http://chartmuseum.jenkins-x.io
+Successfully added Helm repository chartmuseum.jenkins-x.io.
+
+Showing logs for build [32mjxbitcoder-jx-tutorial-pr-6-pr-b26k9-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-jx-preview[0m
+Creating a preview
+Created environment **bitcoder-**-tutorial-pr-6
+Namespace **-**bitcoder-**-tutorial-pr-6 created 
+expose:
+  Annotations:
+    helm.sh/hook: post-install,post-upgrade
+    helm.sh/hook-delete-policy: hook-succeeded
+  config:
+    domain: 34.77.21.1.nip.io
+    exposer: Ingress
+    http: "true"
+preview:
+  image:
+    repository: gcr.io/api-project-173776728244/**-tutorial
+    tag: 0.0.0-SNAPSHOT-PR-6-1
+
+Updating PipelineActivities **bitcoder-**-tutorial-pr-6-1 which has status Running
+Preview application is now available at: http://**-tutorial.**-**bitcoder-**-tutorial-pr-6.34.77.21.1.nip.io
